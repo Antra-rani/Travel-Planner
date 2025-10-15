@@ -8,14 +8,16 @@ const listingSchema = new Schema({
   },
   description: String,
   image: {
-    type: String,
-    default:
+    filename: String,
+    url:  {
+      type: String,
+      default:
       "https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-mR1CIDduGLc",
     set: (v) =>
       v === ""
         ? "https://unsplash.com/photos/white-concrete-building-under-blue-sky-during-daytime-mR1CIDduGLc"
         : v,
-  },
+  } },
   price: Number,
   location: String,
   country: String,
