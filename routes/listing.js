@@ -9,8 +9,6 @@ const listingController = require("../controllers/listing.js");
 const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
-
-
 router
     .route("/")
     .get(wrapAsync(listingController.index)) // Index Route
